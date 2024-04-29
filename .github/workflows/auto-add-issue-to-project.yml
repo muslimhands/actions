@@ -8,11 +8,11 @@ jobs:
     name: Add Issue to user Project
     runs-on: ubuntu-latest
     steps:
-    - name: Add to team/noor-drummond
-      uses: actions/add-to-project@v1.0.1
-      if: |
-        github.event.action == 'assigned' &&
-        contains(github.event.issue.assignees.*.login, 'nadrummond'
-      with:
-        project-url: 'https://github.com/orgs/muslimhands/projects/2'
-        github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: Add to team/noor-drummond
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'nadrummond'
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/2'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
