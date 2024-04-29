@@ -1,0 +1,18 @@
+name: Auto add issue to projects
+
+on:
+  workflow_call:
+
+jobs:
+  add-issue-to-projects:
+    name: Add issue to projects
+    runs-on: ubuntu-latest
+    steps:
+      - name: nadrummond
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'nadrummond')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/2'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
