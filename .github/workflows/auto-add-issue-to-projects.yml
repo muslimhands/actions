@@ -1,14 +1,14 @@
-name: 'auto-add-issue-to-project'
+name: Auto add issue to projects
 
 on:
   workflow_call:
 
 jobs:
-  add-issue-to-project:
-    name: Add Issue to user Project
+  add-issue-to-projects:
+    name: Add issue to projects
     runs-on: ubuntu-latest
     steps:
-      - name: Add to team/noor-drummond
+      - name: nadrummond
         uses: actions/add-to-project@v1.0.1
         if: |
           github.event.action == 'assigned' &&
