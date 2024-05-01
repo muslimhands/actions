@@ -8,6 +8,33 @@ jobs:
     name: Add issue to projects
     runs-on: ubuntu-latest
     steps:
+      - name: ahmadn3o
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'ahmadn3o')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/12'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: aminjafer-n3o
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'aminjafer-n3o')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/10'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: CloP11
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'CloP11')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/13'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    
       - name: nadrummond
         uses: actions/add-to-project@v1.0.1
         if: |
@@ -15,4 +42,31 @@ jobs:
           contains(github.event.issue.assignees.*.login, 'nadrummond')
         with:
           project-url: 'https://github.com/orgs/muslimhands/projects/2'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: rn3o
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'rn3o')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/9'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: sirajurrahmann
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'sirajurrahmann')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/8'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: talhamalik4025
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'talhamalik4025')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/11'
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
