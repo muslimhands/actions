@@ -35,6 +35,15 @@ jobs:
           project-url: 'https://github.com/orgs/muslimhands/projects/10'
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
+      - name: team/CarolineRoose
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'CarolineRoose')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/25'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
       - name: team/CloP11
         uses: actions/add-to-project@v1.0.1
         if: |
@@ -51,6 +60,15 @@ jobs:
           contains(github.event.issue.assignees.*.login, 'nadrummond')
         with:
           project-url: 'https://github.com/orgs/muslimhands/projects/2'
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: team/NawalElMakni
+        uses: actions/add-to-project@v1.0.1
+        if: |
+          github.event.action == 'assigned' &&
+          contains(github.event.issue.assignees.*.login, 'NawalElMakni')
+        with:
+          project-url: 'https://github.com/orgs/muslimhands/projects/24'
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: team/rn3o
